@@ -1,1 +1,10 @@
 1.https://www.positronx.io/codeigniter/  akane onek resource ase codeigniter
+https://www.positronx.io/codeigniter-crud-with-bootstrap-and-mysql-example/
+
+Create project and checking
+
+1.new project: composer create-project codeigniter4/appstarter project name
+checking config
+env ke .env korte hobe
+***controller file created***
+php spark make:contoller (file name)
