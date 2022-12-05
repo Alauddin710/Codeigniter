@@ -25,7 +25,7 @@ class UserCrud extends BaseController
     }
     public function store()
     {
-        helper(['form']);
+        helper(['form']); 
         $rules = [
             'u_name' => 'required',
             'u_email' => 'required'
