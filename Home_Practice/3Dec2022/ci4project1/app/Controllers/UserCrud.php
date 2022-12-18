@@ -9,46 +9,59 @@ class UserCrud extends BaseController
 {
     public function index()
     {
-        $usrsObj = new UserModel();
+        $usreObj = new UserModel();
         // $data['users'] = $usrsObj->OrderBy('id', 'DESC')->findAll();
         // $data['users'] = $usrsObj->findAll();
-        $data['myusers'] = $usrsObj->findAll();
+        $data['myusers'] = $usreObj->findAll();
         return view('user_display', $data);
     }
-    // Add User Create Form
     public function create()
     {
-        return view('add_user');
+        helper(['form']);
+        return view('user_create');
     }
-
-    // insert data
     public function store()
+
     {
-        $userModel = new UserModel();
-        $data = [
-            'name' => $this->request->getVar('name'),
-            'email'  => $this->request->getVar('email'),
+        //helper(['form']); // akane ata lage nai karon holo configer modde autoload.php laste ['form'] ta dile hobe
+        $rules = [
+            'u_name' => 'required',
+            'u_email' => 'required'
         ];
-        $userModel->insert($data);
-        return $this->response->redirect(site_url('/users-list'));
+        if ($this->validate($rules)) {
+
+            $usreObj = new UserModel();
+            $data['name'] = $this->request->getVar('u_name');
+            $data['email'] = $this->request->getVar('u_email');
+            //print_r($data);
+            $usreObj->insert($data);
+            $this->response->redirect('/userdisplay');
+        } else {
+            $data['validation'] = $this->validator;
+            return view('user_create', $data);
+        }
     }
-    // show single user
-    public function singleUser($id = null)
+    public function delete($id)
     {
-        $userModel = new UserModel();
-        $data['user_obj'] = $userModel->where('id', $id)->first();
-        return view('edit_user', $data);
+        //echo $id;
+        $usreObj = new UserModel();
+        $usreObj->where('id', $id)->delete($id);
+        $this->response->redirect('/userdisplay');
     }
-    // update user data
+    public function edit($id)
+    {
+        $usreObj = new UserModel();
+        $data['user'] = $usreObj->find($id);
+        return view('user_edit', $data);
+        // print_r($data);
+    }
     public function update()
     {
-        $userModel = new UserModel();
-        $id = $this->request->getVar('id');
-        $data = [
-            'name' => $this->request->getVar('name'),
-            'email'  => $this->request->getVar('email'),
-        ];
-        $userModel->update($id, $data);
-        return $this->response->redirect(site_url('/users-list'));
+        $usreObj = new UserModel();
+        $id = $this->request->getVar('u_id');
+        $data['name'] = $this->request->getVar('u_name');
+        $data['email'] = $this->request->getVar('u_email');
+        $usreObj->update($id, $data);
+        $this->response->redirect('/userdisplay');
     }
 }

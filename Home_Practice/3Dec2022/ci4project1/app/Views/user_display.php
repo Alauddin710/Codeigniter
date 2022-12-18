@@ -16,14 +16,6 @@
 
 <body>
     <div class="container">
-        <div class="d-flex justify-content-end">
-            <a href="<?php echo site_url('/user-form') ?>" class="btn btn-success mb-2">Add User</a>
-        </div>
-        <?php
-        if (isset($_SESSION['msg'])) {
-            echo $_SESSION['msg'];
-        }
-        ?>
 
         <h1>User Table</h1>
 
@@ -35,15 +27,23 @@
                 <th>ID</th>
                 <th>Name</th>
                 <th>Eamil</th>
+                <th>Action</th>
             </tr>
             <?php foreach ($myusers as $user) : ?>
             <tr>
                 <td><?php echo $user['id'] ?></td>
                 <td><?php echo $user['name'] ?></td>
                 <td><?php echo $user['email'] ?></td>
+                <td>
+                    <a href="<?php echo base_url("users/edit/" . $user['id']) ?>">Edit</a> |
+                    <a href="<?php echo base_url("users/delete/" . $user['id']) ?>">Delete</a>
+                </td>
             </tr>
             <?php endforeach ?>
+
         </table>
+        <a href="/userdisplay">All Users</a>
+        <a href="/users/add">Add Users</a>
     </div>
 </body>
 
