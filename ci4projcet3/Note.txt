@@ -1,0 +1,13 @@
+Student Crud 
+-Student Migration 
+-Student Migrate 
+-Student Model 
+-Student Controller 
+ - Student View 
+
+ -php spark make: migration Student
+ -php spark migrate
+-php spark migrate:refresh //
+-php spark make:Model studentModel
+-php spark make:controller studentController
+-php spark make:controller student --resful
