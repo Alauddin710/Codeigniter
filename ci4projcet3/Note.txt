@@ -1,4 +1,4 @@
-Student Crud 
+Student Crud turi jonno
 -Student Migration 
 -Student Migrate 
 -Student Model 
