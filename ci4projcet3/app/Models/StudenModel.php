@@ -14,7 +14,7 @@ class StudenModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['name'];
+    protected $allowedFields    = ['name', 'email', 'phone', 'address'];
 
     // Dates
     protected $useTimestamps = false;

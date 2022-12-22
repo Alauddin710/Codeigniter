@@ -17,7 +17,7 @@
                 <a class="nav-link <?= ($page == 'contact') ? 'active' : ''; ?>" href="/contact">Contact</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <?= ($page == 'students') ? 'active' : ''; ?>" href="/students">Student List</a>
+                <a class="nav-link <?= ($page == 'Student') ? 'active' : ''; ?>" href="/Student">Student List</a>
             </li>
 
         </ul>
