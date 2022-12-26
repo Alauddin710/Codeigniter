@@ -18,7 +18,12 @@
                 <a class="nav-link <?= ($page=='contact') ? 'active' : '' ;?> " href="/contact">Contact</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <?= ($page=='students') ? 'active' : '' ;?> " href="/students">Students</a>
+                <a class="nav-link <?= ($page=='StudentsController') ? 'active' : '' ;?> "
+                    href="/StudentsController">Students</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link <?= ($page=='ProductController') ? 'active' : '' ;?> "
+                    href="/ProductController">Products</a>
             </li>
         </ul>
     </div>

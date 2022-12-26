@@ -7,7 +7,7 @@ Student Crud turi jonno
 
 -php spark make: migration Student
 -php spark migrate
--php spark migrate:refresh //
+-php spark migrate:refresh // ata holo migrate take muse nuton kore turi korbe
 -php spark make:Model studentModel
 -php spark make:controller studentController
 -php spark make:controller student --resful

@@ -18,7 +18,7 @@ class StudentsController extends ResourceController
         $data['students']=$modeldata->findAll();
         // print_r($data);
         $data['title']= "All Students list";
-        return view('students_list',$data);
+        return view('students/students_list',$data);
     }
 
     /**
@@ -38,7 +38,8 @@ class StudentsController extends ResourceController
      */
     public function new()
     {
-        //
+        $data['title']="Student Entry";
+        return view('students/add_student',$data);
     }
 
     /**
@@ -48,7 +49,22 @@ class StudentsController extends ResourceController
      */
     public function create()
     {
-        //
+       $model = new StudentModel(); //ata asce student model theke
+        // echo $this->request->getPost('name'); // aigulo asce add_student theke
+        // echo $this->request->getPost('phone');
+        // echo $this->request->getPost('email');
+        // echo $this->request->getPost('address');
+
+        $data = $this->request->getPost();
+        
+        if($model->save($data)){
+            
+            return redirect('StudentsController');
+        } ;
+
+        
+        // print_r($data);
+
     }
 
     /**
@@ -58,7 +74,10 @@ class StudentsController extends ResourceController
      */
     public function edit($id = null)
     {
-        //
+        // echo "yes";
+       $model =  new StudentModel();
+       $data ['student'] = $model->find($id);
+       return view('students/edit_student', $data);
     }
 
     /**
@@ -68,7 +87,15 @@ class StudentsController extends ResourceController
      */
     public function update($id = null)
     {
-        //
+        // echo "yes";
+         $model = new StudentModel();
+        $data = $this->request->getPost();
+        
+        if($model->update($id, $data)){
+          return redirect()->to('StudentsController');
+        }
+
+        //print_r($data);
     }
 
     /**
@@ -78,6 +105,8 @@ class StudentsController extends ResourceController
      */
     public function delete($id = null)
     {
-        //
+      $model = new StudentModel();
+      $model->delete($id);
+      return redirect()->to("StudentsController");
     }
 }
