@@ -1,0 +1,496 @@
+ERROR - 2022-12-21 06:40:55 --> mysqli_sql_exception: Table 'ci4project3.studens' doesn't exist in E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\xampp\htdocs\Codeigniter\ci4projcet3\app\Controllers\Student.php(19): CodeIgniter\BaseModel->findAll()
+#7 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Student->index()
+#8 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+#9 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\xampp\htdocs\Codeigniter\ci4projcet3\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('E:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-12-21 06:40:55 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 224.
+ 1 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH\Controllers\Student.php(19): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Student->index()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-21 06:40:58 --> mysqli_sql_exception: Table 'ci4project3.studens' doesn't exist in E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\xampp\htdocs\Codeigniter\ci4projcet3\app\Controllers\Student.php(19): CodeIgniter\BaseModel->findAll()
+#7 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Student->index()
+#8 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+#9 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\xampp\htdocs\Codeigniter\ci4projcet3\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('E:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-12-21 06:40:58 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 224.
+ 1 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH\Controllers\Student.php(19): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Student->index()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-21 06:41:03 --> mysqli_sql_exception: Table 'ci4project3.studens' doesn't exist in E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\xampp\htdocs\Codeigniter\ci4projcet3\app\Controllers\Student.php(19): CodeIgniter\BaseModel->findAll()
+#7 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Student->index()
+#8 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+#9 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\xampp\htdocs\Codeigniter\ci4projcet3\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('E:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-12-21 06:41:03 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 224.
+ 1 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH\Controllers\Student.php(19): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Student->index()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-21 06:41:03 --> mysqli_sql_exception: Table 'ci4project3.studens' doesn't exist in E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\xampp\htdocs\Codeigniter\ci4projcet3\app\Controllers\Student.php(19): CodeIgniter\BaseModel->findAll()
+#7 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Student->index()
+#8 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+#9 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\xampp\htdocs\Codeigniter\ci4projcet3\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('E:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-12-21 06:41:03 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 224.
+ 1 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH\Controllers\Student.php(19): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Student->index()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-21 06:41:26 --> mysqli_sql_exception: Table 'ci4project3.studens' doesn't exist in E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\xampp\htdocs\Codeigniter\ci4projcet3\app\Controllers\Student.php(19): CodeIgniter\BaseModel->findAll()
+#7 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Student->index()
+#8 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+#9 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\xampp\htdocs\Codeigniter\ci4projcet3\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('E:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-12-21 06:41:26 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 224.
+ 1 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH\Controllers\Student.php(19): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Student->index()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-21 06:41:27 --> mysqli_sql_exception: Table 'ci4project3.studens' doesn't exist in E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\xampp\htdocs\Codeigniter\ci4projcet3\app\Controllers\Student.php(19): CodeIgniter\BaseModel->findAll()
+#7 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Student->index()
+#8 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+#9 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\xampp\htdocs\Codeigniter\ci4projcet3\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('E:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-12-21 06:41:27 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 224.
+ 1 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH\Controllers\Student.php(19): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Student->index()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-21 06:41:30 --> mysqli_sql_exception: Table 'ci4project3.studens' doesn't exist in E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\xampp\htdocs\Codeigniter\ci4projcet3\app\Controllers\Student.php(19): CodeIgniter\BaseModel->findAll()
+#7 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Student->index()
+#8 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+#9 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\xampp\htdocs\Codeigniter\ci4projcet3\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('E:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-12-21 06:41:30 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 224.
+ 1 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH\Controllers\Student.php(19): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Student->index()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-21 06:42:42 --> mysqli_sql_exception: Table 'ci4project3.studens' doesn't exist in E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\xampp\htdocs\Codeigniter\ci4projcet3\app\Controllers\Student.php(19): CodeIgniter\BaseModel->findAll()
+#7 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Student->index()
+#8 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+#9 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\xampp\htdocs\Codeigniter\ci4projcet3\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('E:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-12-21 06:42:42 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 224.
+ 1 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH\Controllers\Student.php(19): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Student->index()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-21 06:42:43 --> mysqli_sql_exception: Table 'ci4project3.studens' doesn't exist in E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\xampp\htdocs\Codeigniter\ci4projcet3\app\Controllers\Student.php(19): CodeIgniter\BaseModel->findAll()
+#7 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Student->index()
+#8 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+#9 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\xampp\htdocs\Codeigniter\ci4projcet3\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('E:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-12-21 06:42:43 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 224.
+ 1 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH\Controllers\Student.php(19): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Student->index()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-21 06:42:43 --> mysqli_sql_exception: Table 'ci4project3.studens' doesn't exist in E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\xampp\htdocs\Codeigniter\ci4projcet3\app\Controllers\Student.php(19): CodeIgniter\BaseModel->findAll()
+#7 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Student->index()
+#8 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+#9 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\xampp\htdocs\Codeigniter\ci4projcet3\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('E:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-12-21 06:42:43 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 224.
+ 1 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH\Controllers\Student.php(19): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Student->index()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-21 06:42:47 --> mysqli_sql_exception: Table 'ci4project3.studens' doesn't exist in E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\xampp\htdocs\Codeigniter\ci4projcet3\app\Controllers\Student.php(19): CodeIgniter\BaseModel->findAll()
+#7 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Student->index()
+#8 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+#9 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\xampp\htdocs\Codeigniter\ci4projcet3\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('E:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-12-21 06:42:47 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 224.
+ 1 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH\Controllers\Student.php(19): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Student->index()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-21 06:43:36 --> mysqli_sql_exception: Table 'ci4project3.studens' doesn't exist in E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\xampp\htdocs\Codeigniter\ci4projcet3\app\Controllers\Student.php(19): CodeIgniter\BaseModel->findAll()
+#7 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Student->index()
+#8 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+#9 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\xampp\htdocs\Codeigniter\ci4projcet3\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('E:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-12-21 06:43:36 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 224.
+ 1 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH\Controllers\Student.php(19): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Student->index()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-21 06:43:41 --> mysqli_sql_exception: Table 'ci4project3.studens' doesn't exist in E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\xampp\htdocs\Codeigniter\ci4projcet3\app\Controllers\Student.php(19): CodeIgniter\BaseModel->findAll()
+#7 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Student->index()
+#8 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+#9 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\xampp\htdocs\Codeigniter\ci4projcet3\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('E:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-12-21 06:43:41 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 224.
+ 1 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH\Controllers\Student.php(19): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Student->index()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-21 06:44:53 --> Argument 2 passed to view() must be of the type array, null given, called in E:\xampp\htdocs\Codeigniter\ci4projcet3\app\Controllers\Student.php on line 22
+in SYSTEMPATH\Common.php on line 1120.
+ 1 APPPATH\Controllers\Student.php(22): view('students/students_list', null)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Student->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-21 06:44:57 --> Argument 2 passed to view() must be of the type array, null given, called in E:\xampp\htdocs\Codeigniter\ci4projcet3\app\Controllers\Student.php on line 22
+in SYSTEMPATH\Common.php on line 1120.
+ 1 APPPATH\Controllers\Student.php(22): view('students/students_list', null)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Student->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-21 06:46:22 --> mysqli_sql_exception: Table 'ci4project3.studens' doesn't exist in E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\xampp\htdocs\Codeigniter\ci4projcet3\app\Controllers\Student.php(19): CodeIgniter\BaseModel->findAll()
+#7 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Student->index()
+#8 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+#9 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\xampp\htdocs\Codeigniter\ci4projcet3\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('E:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-12-21 06:46:22 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 224.
+ 1 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH\Controllers\Student.php(19): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Student->index()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-21 06:46:38 --> mysqli_sql_exception: Table 'ci4project3.studens' doesn't exist in E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\xampp\htdocs\Codeigniter\ci4projcet3\app\Controllers\Student.php(19): CodeIgniter\BaseModel->findAll()
+#7 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Student->index()
+#8 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+#9 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\xampp\htdocs\Codeigniter\ci4projcet3\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('E:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-12-21 06:46:38 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 224.
+ 1 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH\Controllers\Student.php(19): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Student->index()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-21 06:46:39 --> mysqli_sql_exception: Table 'ci4project3.studens' doesn't exist in E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\xampp\htdocs\Codeigniter\ci4projcet3\app\Controllers\Student.php(19): CodeIgniter\BaseModel->findAll()
+#7 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Student->index()
+#8 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+#9 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\xampp\htdocs\Codeigniter\ci4projcet3\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('E:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-12-21 06:46:39 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 224.
+ 1 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH\Controllers\Student.php(19): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Student->index()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-21 06:47:44 --> mysqli_sql_exception: Table 'ci4project3.studens' doesn't exist in E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\xampp\htdocs\Codeigniter\ci4projcet3\app\Controllers\Student.php(19): CodeIgniter\BaseModel->findAll()
+#7 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Student->index()
+#8 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+#9 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\xampp\htdocs\Codeigniter\ci4projcet3\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('E:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-12-21 06:47:44 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 224.
+ 1 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH\Controllers\Student.php(19): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Student->index()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-21 06:47:44 --> mysqli_sql_exception: Table 'ci4project3.studens' doesn't exist in E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\xampp\htdocs\Codeigniter\ci4projcet3\app\Controllers\Student.php(19): CodeIgniter\BaseModel->findAll()
+#7 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Student->index()
+#8 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+#9 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\xampp\htdocs\Codeigniter\ci4projcet3\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('E:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-12-21 06:47:44 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 224.
+ 1 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH\Controllers\Student.php(19): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Student->index()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-21 06:47:45 --> mysqli_sql_exception: Table 'ci4project3.studens' doesn't exist in E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\xampp\htdocs\Codeigniter\ci4projcet3\app\Controllers\Student.php(19): CodeIgniter\BaseModel->findAll()
+#7 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Student->index()
+#8 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+#9 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\xampp\htdocs\Codeigniter\ci4projcet3\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('E:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-12-21 06:47:45 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 224.
+ 1 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH\Controllers\Student.php(19): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Student->index()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-21 06:48:41 --> mysqli_sql_exception: Table 'ci4project3.studens' doesn't exist in E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\xampp\htdocs\Codeigniter\ci4projcet3\app\Controllers\Student.php(19): CodeIgniter\BaseModel->findAll()
+#7 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Student->index()
+#8 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+#9 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\xampp\htdocs\Codeigniter\ci4projcet3\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 E:\xampp\htdocs\Codeigniter\ci4projcet3\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('E:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-12-21 06:48:41 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 224.
+ 1 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH\Controllers\Student.php(19): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Student->index()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

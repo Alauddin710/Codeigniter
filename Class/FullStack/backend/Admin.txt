@@ -1,0 +1,15 @@
+Admin Lte Download
+1. create project: composer create-project codeigniter4/appstarter backend
+2. Create database: fullstack_project
+3. Database connection with  .env file 
+4. create controller: php spark make:controller dashboard
+5. Default Controller, Route
+6. dist, plugins folder from adminlte copied public/assets folder
+7. copied all codes from index.html to admin_home.php and update path
+8. templating for dashboard.php
+9. migration for Products // php spark make:migration Products
+php spark migrate
+php spark migrate:refresh //table muse jabe abar migrate korle turi hobe
+php spark migrate:rollback //
+10. Model for Product Model // php spark make:Model ProductModel
+11. Control for Products // php spark make:controller Products --restful
