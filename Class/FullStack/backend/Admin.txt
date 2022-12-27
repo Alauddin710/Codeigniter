@@ -13,3 +13,7 @@ php spark migrate:refresh //table muse jabe abar migrate korle turi hobe
 php spark migrate:rollback //
 10. Model for Product Model // php spark make:Model ProductModel
 11. Control for Products // php spark make:controller Products --restful
+
+27/12/2022
+12. seeder: php spark make:seeder productsseeder
+data send : php spark db:seed ProductsSeeder
