@@ -55,12 +55,13 @@
                   <tbody>
 
                     <?php 
-                    $count =1;
-                    foreach ($products as $product):
+                    //$count =1;
+                    foreach ($products as $sl=>$product):
                       //$count=$count+1;
                     ?>
                   <tr>
-                    <td><?= $count++; ?></td>
+                    <td><?= ++$sl; ?></td>
+                    
 
                     <td><?= $product['product_name'] ?></td>
                     <td><?= $product['product_details'] ?></td>

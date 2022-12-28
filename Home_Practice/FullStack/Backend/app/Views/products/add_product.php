@@ -1,4 +1,4 @@
-<?php echo view('layouts/product_header.php'); ?>
+<?php echo view('layouts/header.php'); ?>
 
 
 <!-- Navbar -->
@@ -36,31 +36,66 @@
 
         <div class="col-lg-12">
 
-
           <div class="card card-primary">
             <div class="card-header">
               <h3 class="card-title">Products</h3>
             </div>
-            
-            <form action="/products/create" method="post">
+
+            <form action="<?= base_url('/products/create') ?>" method="post">
               <?php csrf_field() ?>
+              <?php 
+              if(isset($validation)){
+                $errors = $validation->getErrors();
+                if(count($errors)>0){
+                  echo "<ul>";
+                  foreach($errors as $err){
+                    echo "<li>$err</li>";
+                  }
+                  echo "</ul>";
+                }
+              } 
+              ?>
               <div class="card-body">
                 <div class="form-group">
-                  <label >Product Name</label>
-                  <input type="text" name="product_name" class="form-control"  placeholder="Enter Product Name">
+                  <label>Product Name</label>
+                  <input type="text" name="product_name" value="<?= set_value('product_name') ?>" class="form-control" placeholder="Enter Product Name">
+                  <span class="text-danger">
+                    <?php 
+                    // ata product_name form nice dekanor jonno
+                    if(isset($validation)){
+                      $error = $validation->getError('product_name');
+                      echo $error;
+                    } 
+                    ?>
+                  </span>
                 </div>
                 <div class="form-group">
-                  <label >Product Details</label>
-                  <textarea type="text" name="product_details" class="form-control"  placeholder="Enter Product Details"></textarea>
+                  <label>Product Details</label>
+                  <textarea type="text" name="product_details" id="summernote" class="form-control" placeholder="Enter Product Details"><?= set_value('product_details') ?></textarea>
+                  <span class="text-danger">
+                    <?php 
+                    // ata product_details form nice dekanor jonno
+                    if(isset($validation)){
+                      $error = $validation->getError('product_details');
+                      echo $error;
+                    } 
+                    ?>
+                  </span>
                 </div>
                 <div class="form-group">
-                  <label >Product Price</label>
-                  <input type="text" name="product_price" class="form-control"  placeholder="Enter Product Price">
+                  <label>Product Price</label>
+                  <input type="text" name="product_price" value="<?= set_value('product_price') ?>" class="form-control" placeholder="Enter Product Price">
+                  <span class="text-danger">
+                    <?php 
+                    // ata product_price form nice dekanor jonno
+                    if(isset($validation)){
+                      $error = $validation->getError('product_price');
+                      echo $error;
+                    } 
+                    ?>
+                  </span>
                 </div>
-             
               </div>
-              <!-- /.card-body -->
-
               <div class="card-footer">
                 <button type="submit" class="btn btn-primary">Submit</button>
               </div>
@@ -74,6 +109,5 @@
   </section>
 
 </div>
-<!-- /.content-wrapper -->
 
-<?php echo view('layouts/product_footer.php'); ?>
+<?php echo view('layouts/footer.php'); ?>

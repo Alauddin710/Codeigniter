@@ -42,6 +42,7 @@
                         <form method="post" action="<?= base_url('/products/create') ?>">
                             <div class="card-body">
                                 <?php
+                                // ata error deakanor jonno validation ata asce products theke create methoed theke
                                 if (isset($validation)) {
                                     $errors = $validation->getErrors();
 

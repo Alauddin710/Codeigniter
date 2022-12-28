@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use CodeIgniter\RESTful\ResourceController;
 use App\Models\ProductModel;
+
 class Products extends ResourceController
 {
     /**
@@ -11,13 +12,16 @@ class Products extends ResourceController
      *
      * @return mixed
      */
+
+    function __construct()
+    {
+        helper('form', 'url');
+    }
     public function index()
     {
-       $model=  new ProductModel();
-       $data['products']= $model->findAll();
-       return view('products/product_list',$data);
-
-      
+        $model =  new ProductModel();
+        $data['products'] = $model->findAll();
+        return view('products/product_list', $data);
     }
 
     /**
@@ -37,9 +41,8 @@ class Products extends ResourceController
      */
     public function new()
     {
-      $data['title']="Add Product";
-      return view("products/add_product");
-
+        $data['title'] = "Add Product";
+        return view("products/add_product");
     }
 
     /**
@@ -49,10 +52,19 @@ class Products extends ResourceController
      */
     public function create()
     {
-        $model = new ProductModel();
-        $data = $this->request->getPost();
-        $model->save($data);
-        return redirect()->to('products');
+        $validate = $this->validate([
+            'product_name' => 'required|min_length[5]|max_length[20]',
+            'product_details' => 'required|min_length[10]',
+            'product_price' => 'required|numeric',
+        ]);
+        if (!$validate) {
+            return view('products/add_product', ['validation' => $this->validator]);
+        } else {
+            $model = new ProductModel();
+            $data = $this->request->getPost();
+            $model->save($data);
+            return redirect()->to('products');
+        }
     }
 
     /**
@@ -64,7 +76,7 @@ class Products extends ResourceController
     {
         $model = new ProductModel();
         $data['product'] = $model->find($id);
-        return view('products/edit_product',$data);
+        return view('products/edit_product', $data);
     }
 
     /**
@@ -77,12 +89,9 @@ class Products extends ResourceController
         $model = new ProductModel();
         $data = $this->request->getPost();
 
-        if($model->update($id, $data)){
+        if ($model->update($id, $data)) {
             return redirect()->to('products');
-
         }
-        
-
     }
 
     /**
@@ -92,7 +101,7 @@ class Products extends ResourceController
      */
     public function delete($id = null)
     {
-    
+
         $model = new ProductModel();
         $model->delete($id);
         return redirect()->to("products");
