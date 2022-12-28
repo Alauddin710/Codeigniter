@@ -15,7 +15,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Product Entry Form</h1>
+                    <h1>Product Edit Form</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -26,9 +26,7 @@
             </div>
         </div>
     </section>
-    <?php if (session()->has('errors')) {
-        $errors = session()->errors;
-    } ?>
+
     <!-- Main content -->
     <section class="content">
         <div class="container-fluid">
@@ -38,22 +36,42 @@
                     <!-- general form elements -->
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">Product</h3>
+                            <h3 class="card-title">Product Edit</h3>
+
                         </div>
-
-                        <form method="post" action="<?= base_url('/products/create') ?>">
+                        <?php
+                        $errors = [];
+                        if (session()->has('errors')) {
+                            $errors = session()->errors;
+                        }
+                        ?>
+                        <form method="post" action="<?= base_url('/products/update/' . $product['id']); ?>">
+                            <?= csrf_field() ?>
                             <div class="card-body">
+                                <?php
+                                // ata error deakanor jonno validation ata asce products theke create methoed theke
 
+                                // $errors = $validation->getErrors();
+
+                                // if (isset($errors) && count($errors) > 0) {
+                                //     echo "<ul>";
+                                //     foreach ($errors as $err) {
+                                //         echo "<li> $err</li>";
+                                //     }
+                                //     echo "</ul>";
+                                // }
+
+                                ?>
                                 <div class="form-group">
                                     <label>Product Name</label>
-                                    <input type="text" name="product_name" class="form-control" value="<?php echo old('product_name') ?>" placeholder="Enter Prodcut Name">
+                                    <input type="text" name="product_name" class="form-control" value="<?= old('product_name') ? old('product_name') : $product['product_name'] ?>" placeholder="Enter Prodcut Name">
                                     <span class="text-danger">
                                         <?= isset($errors['product_name']) ? $errors['product_name'] : '' ?>
                                     </span>
                                 </div>
                                 <div class="form-group">
                                     <label>Product details</label>
-                                    <textarea type="text" name="product_details" id="summernote" class="form-control" placeholder="Enter Prodcut Details"><?php echo old('product_details') ?> </textarea>
+                                    <textarea type="text" name="product_details" id="summernote" class="form-control" placeholder="Enter Prodcut Details"><?= old('product_details') ? old('product_details') : $product['product_details'] ?> </textarea>
 
                                     <span class="text-danger">
                                         <?= isset($errors['product_details']) ? $errors['product_details'] : '' ?>
@@ -62,11 +80,12 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Product Price</label>
-                                    <input type="text" name="product_price" class="form-control" value="<?php echo old('product_price') ?>" placeholder="Enter Prodcut Price">
+                                    <input type="text" name="product_price" class="form-control" value="<?= old('product_price') ? old('product_price') : $product['product_price'] ?>" placeholder="Enter Prodcut Price">
+                                    <span class="text-danger">
+                                        <?= isset($errors['product_details']) ? $errors['product_details'] : '' ?>
+                                    </span>
                                 </div>
-                                <span class="text-danger">
-                                    <?= isset($errors['product_price']) ? $errors['product_price'] : '' ?>
-                                </span>
+
                             </div>
                             <!-- /.card-body -->
 

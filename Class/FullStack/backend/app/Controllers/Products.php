@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+
+
 use App\Models\ProductModel;
 use CodeIgniter\RESTful\ResourceController;
 
@@ -51,22 +53,41 @@ class Products extends ResourceController
      */
     public function create()
     {
+        $rules =
+            [
+                'product_name' => 'required|min_length[5]|max_length[20]',
+                'product_details' => 'required|min_length[10]',
+                'product_price' => 'required|numeric',
+            ];
 
-        $validate = $this->validate([
-            'product_name' => 'required|min_length[5]|max_length[20]',
-            'product_details' => 'required|min_length[10]',
-            'product_price' => 'required|numeric',
-        ]);
-        // $data = $this->request->getPost();
-        if (!$validate) {
-            return view('products/product_entry', ['validation' => $this->validator]);
-            // return view('products/product_entry', ['validation' => $this->validator]);
+        $errors =
+            [
+                'product_name' => [
+                    'required' => 'Product Name must be fill',
+                    'min_length' => 'Mininum Length',
+                    'max_length' => 'Product must be fill',
+                ],
+                'product_details' => [
+                    'required' => 'Product Name must be fill',
+                    'min_length' => 'Mininum Length 10',
+
+                ],
+
+                'product_price' => [
+                    'required' => 'Product Name must be fill',
+                    'numeric' => 'number only',
+
+                ],
+            ];
+
+        $validation = $this->validate($rules, $errors);
+        if (!$validation) {
+            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
         } else {
             $model = new ProductModel();
             $data = $this->request->getPost();
             $model->save($data);
             return redirect()->to('products');
-            // echo "Yes All ar Ok";
         }
     }
 
@@ -77,7 +98,10 @@ class Products extends ResourceController
      */
     public function edit($id = null)
     {
-        //
+        // echo "yes";
+        $model = new ProductModel();
+        $data['product'] = $model->find($id);
+        return view("products/product_edit", $data);
     }
 
     /**
@@ -87,7 +111,24 @@ class Products extends ResourceController
      */
     public function update($id = null)
     {
-        //
+
+        $validate = $this->validate([
+            'product_name' => 'required|min_length[5]|max_length[20]',
+            'product_details' => 'required|min_length[10]',
+            'product_price' => 'required|numeric',
+        ]);
+        // echo $id;
+        if (!$validate) {
+            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
+        } else {
+            $model = new ProductModel();
+            $data['product_name'] = $this->request->getPost('product_name');
+            $data['product_details'] = $this->request->getPost('product_details');
+            $data['product_price'] = $this->request->getPost('product_price');
+
+            $model->update($id, $data);
+            return redirect()->to('products')->with('msg', "Update Successfully");
+        }
     }
 
     /**
@@ -99,6 +140,6 @@ class Products extends ResourceController
     {
         $model = new ProductModel();
         $model->delete($id);
-        return redirect()->to('products');
+        return redirect()->to('products')->with('del', "Delete Successfully");
     }
 }

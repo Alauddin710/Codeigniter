@@ -15,6 +15,19 @@
             <div class="row mb-2">
                 <div class="col-sm-6">
                     <h1 class="m-0">Prodcuts</h1>
+                    <?php
+                    if (session()->has('msg')) : ?>
+                        <div class="alert alert-success"> <?= session()->msg; ?></div>
+
+
+                    <?php endif ?>
+
+                    <?php
+                    if (session()->has('del')) : ?>
+                        <div class="alert alert-danger"> <?= session()->del; ?></div>
+
+
+                    <?php endif ?>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -61,7 +74,7 @@
                                             </td>
                                             <td><?= $product['product_details']; ?></td>
                                             <td> <?= $product['product_price']; ?></td>
-                                            <td> <a href="/products/edit/<?php echo $product['id']; ?>"> <i class="fa fa-pen"></i></a>
+                                            <td> <a href="<?= site_url("/products/edit/" . $product['id']) ?>"> <i class="fa fa-pen"></i></a>
                                                 <a href="/products/delete/<?php echo $product['id']; ?>"> <i class="fa fa-trash"></i></a>
                                             </td>
                                         </tr>
