@@ -28,6 +28,15 @@ class Products extends Migration
                 'type' => "DECIMAL",
                 'constraint' => '10, 2',
 
+            ],
+            "product_image" => [
+                'type' => "VARCHAR",
+                'constraint' => 100,
+                'null' => true
+
+            ],
+            "product_category" => [
+                'type' => "TINYINT",
             ]
         ]);
         $this->forge->addKey("id", true);

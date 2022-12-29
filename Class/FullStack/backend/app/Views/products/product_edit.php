@@ -45,7 +45,7 @@
                             $errors = session()->errors;
                         }
                         ?>
-                        <form method="post" action="<?= base_url('/products/update/' . $product['id']); ?>">
+                        <form method="post" action="<?= base_url('/products/update/' . $product['id']); ?>" enctype="multipart/form-data">
                             <?= csrf_field() ?>
                             <div class="card-body">
                                 <?php
@@ -85,7 +85,13 @@
                                         <?= isset($errors['product_details']) ? $errors['product_details'] : '' ?>
                                     </span>
                                 </div>
-
+                                <div class="form-group">
+                                    <label>Product Image</label>
+                                    <input type="file" name="product_image" class="form-control" value="<?php echo old('product_image') ?>">
+                                    <span class="text-danger">
+                                        <?= isset($errors['product_image']) ? $errors['product_image'] : '' ?>
+                                    </span>
+                                </div>
                             </div>
                             <!-- /.card-body -->
 
