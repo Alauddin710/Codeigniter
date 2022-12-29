@@ -27,6 +27,9 @@
     </div>
   </div>
 
+  <?php if (session()->has('errors')) {
+    $errors = session()->errors;
+  } ?>
   <!-- Main content -->
   <section class="content">
     <div class="container-fluid">
@@ -43,55 +46,37 @@
 
             <form action="<?= base_url('/products/create') ?>" method="post">
               <?php csrf_field() ?>
-              <?php 
-              if(isset($validation)){
-                $errors = $validation->getErrors();
-                if(count($errors)>0){
-                  echo "<ul>";
-                  foreach($errors as $err){
-                    echo "<li>$err</li>";
-                  }
-                  echo "</ul>";
-                }
-              } 
-              ?>
+
               <div class="card-body">
                 <div class="form-group">
                   <label>Product Name</label>
-                  <input type="text" name="product_name" value="<?= set_value('product_name') ?>" class="form-control" placeholder="Enter Product Name">
+                  <input type="text" name="product_name" value="<?= old('product_name') ?>" class="form-control" placeholder="Enter Product Name">
                   <span class="text-danger">
-                    <?php 
+                    <?=
                     // ata product_name form nice dekanor jonno
-                    if(isset($validation)){
-                      $error = $validation->getError('product_name');
-                      echo $error;
-                    } 
+                    isset($errors['product_name']) ? $errors['product_name'] : '';
                     ?>
                   </span>
                 </div>
                 <div class="form-group">
                   <label>Product Details</label>
-                  <textarea type="text" name="product_details" id="summernote" class="form-control" placeholder="Enter Product Details"><?= set_value('product_details') ?></textarea>
+                  <textarea type="text" name="product_details" id="summernote" class="form-control" placeholder="Enter Product Details"><?= old('product_details') ?></textarea>
                   <span class="text-danger">
-                    <?php 
+                    <?=
                     // ata product_details form nice dekanor jonno
-                    if(isset($validation)){
-                      $error = $validation->getError('product_details');
-                      echo $error;
-                    } 
+                     isset($errors['product_details']) ? $errors['product_details']: '';
+                    
                     ?>
                   </span>
                 </div>
                 <div class="form-group">
                   <label>Product Price</label>
-                  <input type="text" name="product_price" value="<?= set_value('product_price') ?>" class="form-control" placeholder="Enter Product Price">
+                  <input type="text" name="product_price" value="<?= old('product_price') ?>" class="form-control" placeholder="Enter Product Price">
                   <span class="text-danger">
-                    <?php 
+                    <?=
                     // ata product_price form nice dekanor jonno
-                    if(isset($validation)){
-                      $error = $validation->getError('product_price');
-                      echo $error;
-                    } 
+                     isset($errors['product_price']) ? $errors['product_price']:'';
+                     
                     ?>
                   </span>
                 </div>
