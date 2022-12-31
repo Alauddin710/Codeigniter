@@ -82,7 +82,7 @@
                                     <label>Product Price</label>
                                     <input type="text" name="product_price" class="form-control" value="<?= old('product_price') ? old('product_price') : $product['product_price'] ?>" placeholder="Enter Prodcut Price">
                                     <span class="text-danger">
-                                        <?= isset($errors['product_details']) ? $errors['product_details'] : '' ?>
+                                        <?= isset($errors['product_price']) ? $errors['product_price'] : '' ?>
                                     </span>
                                 </div>
                                 <div class="form-group">

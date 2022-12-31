@@ -153,7 +153,7 @@ class Products extends ResourceController
         } else {
 
             $img = $this->request->getFile('product_image');
-            $path = "/assets/uploads";
+            $path = "/assets/uploads/";
 
             $img->move($path);
 

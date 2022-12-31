@@ -137,6 +137,7 @@
                             </a>
                         </li> -->
                     </ul>
+                    <a href="<?php echo site_url("/users/logout") ?>">Logout</a>
                 </li>
 
             </ul>

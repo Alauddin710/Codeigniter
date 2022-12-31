@@ -17,3 +17,9 @@ php spark migrate:rollback //
 27/12/2022
 12. seeder: php spark make:seeder productsseeder
 data send : php spark db:seed ProductsSeeder
+
+1. Auth Login: 
+-php spark make:migration users
+-php spark migrate 
+-php spark make:model usermodel
+php spark make:controller signupcontroller
