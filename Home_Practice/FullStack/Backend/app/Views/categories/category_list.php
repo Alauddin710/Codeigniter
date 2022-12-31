@@ -35,7 +35,7 @@
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active">Products</li>
+            <li class="breadcrumb-item active">Category</li>
           </ol>
         </div>
       </div>
@@ -61,11 +61,7 @@
                 <thead>
                   <tr>
                     <th>SL</th>
-                    <th>Product Name</th>
-                    <th>Product Details</th>
-                    <th>Product Image</th>
-                    <th>Product Price</th>
-                    <th>Product Category</th>
+                    <th>Category Name</th>
                     <th>Action</th>
                   </tr>
                 </thead>
@@ -73,21 +69,18 @@
 
                   <?php
                   $count = 1;
-                  foreach ($products as $product) :
+                  foreach ($cats as $cat) :
                     //$count=$count+1;
                   ?>
                     <tr>
                       <td><?= $count++; ?></td>
 
 
-                      <td><?= $product['product_name'] ?></td>
-                      <td><?= $product['product_details'] ?></td>
-                      <td> <img width="100px" src=" <?= $product['product_image'] ?>" alt=""></td>
-                      <td> <?= $product['product_price'] ?></td>
-                      <td> <?= $product['product_category'] ?></td>
+                      <td><?= $cat['category_name'] ?></td>
+                      
                       <td>
-                        <a href="/products/edit/<?php echo $product['id']; ?>">Edit</a>
-                        <a href="/products/delete/<?php echo $product['id']; ?>">Delete</a>
+                        <!-- <a href="/category/edit/<?php //echo $cat['id']; ?>">Edit</a>
+                        <a href="/category/delete/<?php //echo $cat['id']; ?>">Delete</a> -->
                       </td>
                     </tr>
                   <?php

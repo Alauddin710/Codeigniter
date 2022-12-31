@@ -89,7 +89,7 @@ class Products extends ResourceController
                 ],
                 'product_image' => [
                     'mime_in' => 'Only jpg,png, and jpeg are allowed',
-                    'max_size' => 'Not more than 1md',
+                    'max_size' => 'Not more than 1mb',
 
                 ],
             ];

@@ -146,8 +146,30 @@
               </li> -->
             </ul>
           </li>
-       
-         
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-chart-pie"></i>
+              <p>
+                Category
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="/category" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>All Category</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/category/new" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>New Category</p>
+                </a>
+              </li>
+             
+            </ul>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

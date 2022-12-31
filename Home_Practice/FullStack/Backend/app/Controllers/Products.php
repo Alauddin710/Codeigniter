@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\CategoryModel;
 use CodeIgniter\RESTful\ResourceController;
 use App\Models\ProductModel;
 
@@ -38,8 +39,11 @@ class Products extends ResourceController
      */
     public function new()
     {
-        $data['title'] = "Add Product";
-        return view("products/add_product");
+        $model = new CategoryModel();
+        $data['cats'] = $model->orderBy('category_name', 'ASC')->findAll();
+
+        // $data['title'] = "Add Product";
+        return view("products/add_product", $data);
     }
 
     /**
@@ -50,11 +54,20 @@ class Products extends ResourceController
     public function create()
 
     {
+
+
+
+        // fild required hoi
         $rules =
             [
                 'product_name' => 'required|min_length[5]|max_length[20]',
                 'product_details' => 'required|min_length[10]',
                 'product_price' => 'required|numeric',
+                'product_image' => [
+                    'uploaded[product_image]',
+                    'mime_in[product_image,image/jpg,image/jpeg,image/png]',
+                    'max_size[product_image,1024]',
+                ]
             ];
         $errors =
             [
@@ -73,6 +86,10 @@ class Products extends ResourceController
                 'product_price' => [
                     'required' => 'Product price fill',
                     'numeric' => 'Product price only number',
+                ],
+                'product_image' => [
+                    'mime_in' => 'Product image png, jpg and jpeg allowed',
+                    'max_size' => 'Maximum size allowed 1mb',
                 ]
             ];
 
@@ -89,10 +106,23 @@ class Products extends ResourceController
 
             return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
         } else {
+
+            $img = $this->request->getFile('product_image');
+            $path = "assets/uploads/";
+
+            $img->move($path);
+
+            $data['product_name'] = $this->request->getPost('product_name');
+            //bampaser ta database name and danpaser ta form name
+            $data['product_category'] = $this->request->getPost('product_cat');
+            $data['product_details'] = $this->request->getPost('product_details');
+            $data['product_price'] = $this->request->getPost('product_price');
+            $namepath = $path . $img->getName();
+            $data['product_image'] = $namepath;
+
             $model = new ProductModel();
-            $data = $this->request->getPost();
             $model->save($data);
-            return redirect()->to('products')->with('insert','Data insert successfuly');;
+            return redirect()->to('products')->with('insert', 'Data insert successfuly');;
         }
     }
 
@@ -124,14 +154,14 @@ class Products extends ResourceController
         ]);
         if (!$validate) {
             return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
-        } else{
+        } else {
             $model = new ProductModel();
-            $data ['product_name'] = $this->request->getPost('product_name');
-            $data ['product_details'] = $this->request->getPost('product_details');
-            $data ['product_price'] = $this->request->getPost('product_price');
+            $data['product_name'] = $this->request->getPost('product_name');
+            $data['product_details'] = $this->request->getPost('product_details');
+            $data['product_price'] = $this->request->getPost('product_price');
             $model->update($id, $data);
-            return redirect()->to('products')->with('msg','Update successfuly');
-        } 
+            return redirect()->to('products')->with('msg', 'Update successfuly');
+        }
     }
 
     /**
@@ -144,6 +174,6 @@ class Products extends ResourceController
 
         $model = new ProductModel();
         $model->delete($id);
-        return redirect()->to("products")->with('del','Delete successfuly');
+        return redirect()->to("products")->with('del', 'Delete successfuly');
     }
 }

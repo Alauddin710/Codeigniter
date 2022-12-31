@@ -44,7 +44,7 @@
               <h3 class="card-title">Products</h3>
             </div>
 
-            <form action="<?= base_url('/products/create') ?>" method="post">
+            <form action="<?= base_url('/products/create') ?>" method="post" enctype="multipart/form-data">
               <?php csrf_field() ?>
 
               <div class="card-body">
@@ -59,6 +59,22 @@
                   </span>
                 </div>
                 <div class="form-group">
+                  <label>Product Category</label>
+                  <select name="product_cat" class="form-control">
+                    <option value="">Select One</option>
+                    <?php foreach($cats as $cat): ?>
+                    <option value="<?= $cat ['id'] ?>"><?= $cat['category_name'] ?></option>
+                    <?php endforeach ?>
+                  </select>
+                  
+                  <span class="text-danger">
+                    <?=
+                    // ata product_name form nice dekanor jonno
+                    isset($errors['product_cat']) ? $errors['product_cat'] : '';
+                    ?>
+                  </span>
+                </div>
+                <div class="form-group">
                   <label>Product Details</label>
                   <textarea type="text" name="product_details" id="summernote" class="form-control" placeholder="Enter Product Details"><?= old('product_details') ?></textarea>
                   <span class="text-danger">
@@ -66,6 +82,17 @@
                     // ata product_details form nice dekanor jonno
                      isset($errors['product_details']) ? $errors['product_details']: '';
                     
+                    ?>
+                  </span>
+                </div>
+                <div class="form-group">
+                  <label>Product Image</label>
+                  <input type="file" name="product_image" value="<?= old('product_image') ?>" class="form-control" >
+                  <span class="text-danger">
+                    <?=
+                    // ata product_price form nice dekanor jonno
+                     isset($errors['product_image']) ? $errors['product_image']:'';
+                     
                     ?>
                   </span>
                 </div>
