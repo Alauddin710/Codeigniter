@@ -25,3 +25,8 @@ data send : php spark db:seed ProductsSeeder
 -php spark make:controller signupcontroller
 -php spark make:controller signincontroller
 -php spark make:filter authguard //tat command dile pilter ar moodde atuhguard turi hobe
+
+frontend
+-npx i react-router-dom
+-php spark make:filter Cors
+npm i axios

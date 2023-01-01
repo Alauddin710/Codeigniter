@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Models\CategoryModel;
 use App\Models\ProductModel;
-
+use CodeIgniter\API\ResponseTrait;
 use CodeIgniter\RESTful\ResourceController;
 
 class Products extends ResourceController
@@ -18,12 +18,14 @@ class Products extends ResourceController
     {
         helper(['form', 'url']);
     }
+    use ResponseTrait;
     public function index()
     {
 
         $model = new ProductModel();
         $data['products'] = $model->orderBy('id', 'DESC')->findAll();
-        return view('products/product_list', $data);
+        // return view('products/product_list', $data);
+        return $this->respond($data);
         // print_r($data);
     }
 
