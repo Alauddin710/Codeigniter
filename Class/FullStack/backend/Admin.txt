@@ -22,4 +22,6 @@ data send : php spark db:seed ProductsSeeder
 -php spark make:migration users
 -php spark migrate 
 -php spark make:model usermodel
-php spark make:controller signupcontroller
+-php spark make:controller signupcontroller
+-php spark make:controller signincontroller
+-php spark make:filter authguard //tat command dile pilter ar moodde atuhguard turi hobe

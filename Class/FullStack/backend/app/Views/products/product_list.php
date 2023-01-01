@@ -77,6 +77,7 @@
                                             <td><?= $product['product_details']; ?></td>
                                             <td> <?= $product['product_price']; ?></td>
                                             <td> <img width="50px" src="<?= $product['product_image']; ?>" alt=""> </td>
+                                            
                                             <td> <?= $product['product_category']; ?></td>
                                             <td> <a href="<?= site_url("/products/edit/" . $product['id']) ?>"> <i class="fa fa-pen"></i></a>
                                                 <a href="/products/delete/<?php echo $product['id']; ?>"> <i class="fa fa-trash"></i></a>

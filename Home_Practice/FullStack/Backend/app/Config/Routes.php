@@ -40,6 +40,11 @@ $routes->setAutoRoute(true);
 $routes->get('/dashboard', 'Dashboard::index');
 $routes->resource('Products');
 $routes->resource('category');
+$routes->get('users/signup','SignupController::index');
+$routes->post('users/store','SignupController::store');
+$routes->get('users/signin','SigninController::index');
+$routes->post('users/auth','SigninController::loginauth');
+$routes->get('users/logout','SigninController::logout');
 
 /*
  * --------------------------------------------------------------------
