@@ -1,3 +1,9 @@
+<?php
+// $sess = session();
+
+// echo "<pre>";
+// print_r($sess->get());
+?>
 <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
@@ -11,7 +17,8 @@
             <a href="#" class="nav-link">Contact</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="<?php echo site_url("/users/logout") ?> " class="nav-link">Logout</a>
+
+            <a href=" <?php echo site_url("/users/logout") ?>" class="nav-link"> Logout &nbsp;&nbsp; <?= session()->get('name') ?></a>
         </li>
     </ul>
 

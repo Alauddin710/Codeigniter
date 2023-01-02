@@ -45,13 +45,20 @@ $routes->setAutoRoute(true);
 //     $routes->get('dashboard/users/logout', 'SigninController::logout');
 // });
 
-$routes->get('/dashboard', 'Dashboard::index', ['filter' => 'authGuard']);
-$routes->resource('Products');
+// $routes->get('/admin', 'Dashboard::index', ['filter' => 'authGuard']);
+$routes->get('/', 'Dashboard::index', ['filter' => 'authGuard']);
+// $routes->resource('Products');
+$routes->presenter('products', ['filter' => 'authGuard']);
+
+
 $routes->get('/users/signup', 'SignupController::index');
 $routes->post('/users/store', 'SignupController::store');
 $routes->get('/users/signin', 'SigninController::index');
 $routes->post('/users/auth', 'SigninController::loginAuth');
 $routes->get('/users/logout', 'SigninController::logout');
+
+// forntend
+$routes->get('/frontend/products', 'Frontend::ProductList');
 
 /*
  * --------------------------------------------------------------------

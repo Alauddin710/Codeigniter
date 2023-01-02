@@ -11,14 +11,14 @@ const ProductList = () => {
   }, []);
 
   const getProducts = async () => {
-    const products = await axios.get("http://localhost:8080/products");
-    setProducts(products.data.products);
+    const products = await axios.get("http://localhost:8080/frontend/products");
+    setProducts(products.data);
   };
-  // console.log(products);
-  const deleteProduct = async (id) => {
-    await axios.delete(`http://localhost:8080/products/${id}`);
-    getProducts();
-  };
+  // // console.log(products);
+  // const deleteProduct = async (id) => {
+  //   await axios.delete(`http://localhost:8080/frontend/products/${id}`);
+  //   getProducts();
+  // };
 
   return (
     <div>
@@ -55,12 +55,12 @@ const ProductList = () => {
                 <Link to={`/edit/${product.id}`} className="btn btn-success">
                   Edit
                 </Link>
-                <button
+                {/* <button
                   onClick={() => deleteProduct(product.id)}
                   className="btn btn-danger"
                 >
                   Delete
-                </button>
+                </button> */}
               </td>
             </tr>
           ))}

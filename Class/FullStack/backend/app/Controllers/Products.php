@@ -24,8 +24,8 @@ class Products extends ResourceController
 
         $model = new ProductModel();
         $data['products'] = $model->orderBy('id', 'DESC')->findAll();
-        // return view('products/product_list', $data);
-        return $this->respond($data);
+        return view('products/product_list', $data);
+        // return $this->respond($data);
         // print_r($data);
     }
 
@@ -155,7 +155,10 @@ class Products extends ResourceController
         } else {
 
             $img = $this->request->getFile('product_image');
-            $path = "/assets/uploads/";
+            print_r($img);
+
+
+            $path = "assets/uploads/";
 
             $img->move($path);
 
@@ -168,7 +171,7 @@ class Products extends ResourceController
 
             $model = new ProductModel();
             $model->update($id, $data);
-            return redirect()->to('products')->with('msg', "Update Successfully");
+            return redirect()->to('products'); //->with('msg', "Update Successfully");
         }
     }
 
