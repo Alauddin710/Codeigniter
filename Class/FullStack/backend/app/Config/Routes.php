@@ -57,6 +57,9 @@ $routes->get('/users/signin', 'SigninController::index');
 $routes->post('/users/auth', 'SigninController::loginAuth');
 $routes->get('/users/logout', 'SigninController::logout');
 
+
+$routes->get('/qb', 'Qb::index');
+
 // forntend
 $routes->get('/frontend/products', 'Frontend::ProductList');
 
