@@ -9,6 +9,7 @@ import Login from "./Login";
 import Signup from "./Signup";
 import ForgotPassword from "./ForgotPassword";
 import { BrowserRouter, Routes, Route, Link, Outlet } from "react-router-dom";
+import ProductList from "./components/ProductList";
 function App() {
   return (
     <div className="App">
@@ -16,6 +17,7 @@ function App() {
         <Header></Header>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="frontend/products" element={<ProductList />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/single-product" element={<SingleProduct />} />
           <Route path="/checkout" element={<Checkout />} />

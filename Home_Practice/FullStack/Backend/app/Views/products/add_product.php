@@ -9,6 +9,8 @@
 <?php echo view('layouts/main_sidebar.php'); ?>
 
 <!-- Content Wrapper. Contains page content -->
+
+<?php echo view('layouts/footer.php'); ?>
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
   <div class="content-header">
@@ -44,67 +46,65 @@
               <h3 class="card-title">Products</h3>
             </div>
 
-            <form action="<?= base_url('/products/create') ?>" method="post" enctype="multipart/form-data">
-              <?php csrf_field() ?>
+            <form action="<?= base_url(
+                            '/products/create'
+                          ) ?>" method="post" enctype="multipart/form-data">
+              <?php csrf_field(); ?>
 
               <div class="card-body">
                 <div class="form-group">
                   <label>Product Name</label>
                   <input type="text" name="product_name" value="<?= old('product_name') ?>" class="form-control" placeholder="Enter Product Name">
                   <span class="text-danger">
-                    <?=
-                    // ata product_name form nice dekanor jonno
-                    isset($errors['product_name']) ? $errors['product_name'] : '';
-                    ?>
+                    <?= // ata product_name form nice dekanor jonno
+                    isset($errors['product_name'])
+                      ? $errors['product_name']
+                      : '' ?>
                   </span>
-                </div>
+                </div>s
                 <div class="form-group">
                   <label>Product Category</label>
                   <select name="product_cat" class="form-control">
                     <option value="">Select One</option>
-                    <?php foreach($cats as $cat): ?>
-                    <option value="<?= $cat ['id'] ?>"><?= $cat['category_name'] ?></option>
-                    <?php endforeach ?>
+                    <?php foreach ($cats as $cat) : ?>
+                      <option value="<?= $cat['id'] ?>"><?= $cat['category_name'] ?></option>
+                    <?php endforeach; ?>
                   </select>
-                  
                   <span class="text-danger">
-                    <?=
-                    // ata product_name form nice dekanor jonno
-                    isset($errors['product_cat']) ? $errors['product_cat'] : '';
-                    ?>
+                    <?= // ata product_name form nice dekanor jonno
+                    isset($errors['product_cat'])
+                      ? $errors['product_cat']
+                      : '' ?>
                   </span>
                 </div>
                 <div class="form-group">
                   <label>Product Details</label>
-                  <textarea type="text" name="product_details" id="summernote" class="form-control" placeholder="Enter Product Details"><?= old('product_details') ?></textarea>
+                  <textarea type="text" name="product_details" id="summernote" class="form-control"><?= old('product_details') ?></textarea>
                   <span class="text-danger">
-                    <?=
-                    // ata product_details form nice dekanor jonno
-                     isset($errors['product_details']) ? $errors['product_details']: '';
-                    
-                    ?>
+                    <?= // ata product_details form nice dekanor jonno
+                    isset($errors['product_details'])
+                      ? $errors['product_details']
+                      : '' ?>
                   </span>
                 </div>
                 <div class="form-group">
                   <label>Product Image</label>
-                  <input type="file" name="product_image" value="<?= old('product_image') ?>" class="form-control" >
+                  <input type="file" name="product_image" value="<?= old('product_image') ?>" class="form-control">
                   <span class="text-danger">
-                    <?=
-                    // ata product_price form nice dekanor jonno
-                     isset($errors['product_image']) ? $errors['product_image']:'';
-                     
-                    ?>
+                    <?= // ata product_price form nice dekanor jonno
+                    isset($errors['product_image'])
+                      ? $errors['product_image']
+                      : '' ?>
                   </span>
                 </div>
                 <div class="form-group">
                   <label>Product Price</label>
                   <input type="text" name="product_price" value="<?= old('product_price') ?>" class="form-control" placeholder="Enter Product Price">
                   <span class="text-danger">
-                    <?=
-                    // ata product_price form nice dekanor jonno
-                     isset($errors['product_price']) ? $errors['product_price']:'';
-                     
-                    ?>
+                    <?= // ata product_price form nice dekanor jonno
+                    isset($errors['product_price'])
+                      ? $errors['product_price']
+                      : '' ?>
                   </span>
                 </div>
               </div>
@@ -114,12 +114,8 @@
             </form>
           </div>
         </div>
-
       </div>
-
     </div>
   </section>
 
 </div>
-
-<?php echo view('layouts/footer.php'); ?>

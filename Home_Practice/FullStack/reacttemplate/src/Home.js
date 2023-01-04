@@ -1,4 +1,17 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
+
 function Home() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    getProducts();
+  }, []);
+
+  const getProducts = async () => {
+    const products = await axios.get("http://localhost:8080/frontend/products");
+    setProducts(products.data);
+  };
   return (
     <div className="home-container">
       <div className="main-slider slider slick-initialized slick-slider">
@@ -86,31 +99,34 @@ function Home() {
             </div>
           </div>
 
+          {/* product query */}
+
           <div class="row">
+            {products.map((pr,index)=>(
             <div class="col-lg-3 col-12 col-md-6 col-sm-6 mb-5">
               <div class="product">
                 <div class="product-wrap">
                   <a href="/product-single">
                     <img
                       class="img-fluid w-100 mb-3 img-first"
-                      src="assets/images/322.jpg"
+                      src={`http://localhost:8080/${pr.product_image}`}
                       alt="product-img"
                     />
                   </a>
-                  <a href="/product-single">
+                  {/* <a href="/product-single">
                     <img
                       class="img-fluid w-100 mb-3 img-second"
                       src="assets/images/444.jpg"
                       alt="product-img"
                     />
-                  </a>
+                  </a> */}
                 </div>
 
                 <span class="onsale">Sale</span>
                 <div class="product-hover-overlay">
-                  <a href="#">
+                  {/* <a href="#">
                     <i class="tf-ion-android-cart"></i>
-                  </a>
+                  </a> */}
                   <a href="#">
                     <i class="tf-ion-ios-heart"></i>
                   </a>
@@ -118,277 +134,13 @@ function Home() {
 
                 <div class="product-info">
                   <h2 class="product-title h5 mb-0">
-                    <a href="#">Floral Kirby</a>
+                    <a href="#"> {pr.product_name}</a>
                   </h2>
-                  <span class="price">$329.10</span>
+                  <span class="price">{pr.product_price}</span>
                 </div>
               </div>
             </div>
-
-            <div class="col-lg-3 col-12 col-md-6 col-sm-6 mb-5">
-              <div class="product">
-                <div class="product-wrap">
-                  <a href="/product-single">
-                    <img
-                      class="img-fluid w-100 mb-3 img-first"
-                      src="assets/images/111.jpg"
-                      alt="product-img"
-                    />
-                  </a>
-                  <a href="/product-single">
-                    <img
-                      class="img-fluid w-100 mb-3 img-second"
-                      src="assets/images/444.jpg"
-                      alt="product-img"
-                    />
-                  </a>
-                </div>
-
-                <div class="product-hover-overlay">
-                  <a href="#">
-                    <i class="tf-ion-android-cart"></i>
-                  </a>
-                  <a href="#">
-                    <i class="tf-ion-ios-heart"></i>
-                  </a>
-                </div>
-
-                <div class="product-info">
-                  <h2 class="product-title h5 mb-0">
-                    <a href="#">Open knit switer</a>
-                  </h2>
-                  <span class="price">$29.10</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-12 col-md-6 col-sm-6 mb-5">
-              <div class="product">
-                <div class="product-wrap">
-                  <a href="/product-single">
-                    <img
-                      class="img-fluid w-100 mb-3 img-first"
-                      src="assets/images/222.jpg"
-                      alt="product-img"
-                    />
-                  </a>
-                  <a href="/product-single">
-                    <img
-                      class="img-fluid w-100 mb-3 img-second"
-                      src="assets/images/322.jpg"
-                      alt="product-img"
-                    />
-                  </a>
-                </div>
-
-                <span class="onsale">Sale</span>
-                <div class="product-hover-overlay">
-                  <a href="#">
-                    <i class="tf-ion-android-cart"></i>
-                  </a>
-                  <a href="#">
-                    <i class="tf-ion-ios-heart"></i>
-                  </a>
-                </div>
-
-                <div class="product-info">
-                  <h2 class="product-title h5 mb-0">
-                    <a href="#">Official trendy</a>
-                  </h2>
-                  <span class="price">$350.00 – $355.00</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-12 col-md-6 col-sm-6 mb-5">
-              <div class="product">
-                <div class="product-wrap">
-                  <a href="/product-single">
-                    <img
-                      class="img-fluid w-100 mb-3 img-first"
-                      src="assets/images/322.jpg"
-                      alt="product-img"
-                    />
-                  </a>
-                  <a href="/product-single">
-                    <img
-                      class="img-fluid w-100 mb-3 img-second"
-                      src="assets/images/111.jpg"
-                      alt="product-img"
-                    />
-                  </a>
-                </div>
-
-                <div class="product-hover-overlay">
-                  <a href="#">
-                    <i class="tf-ion-android-cart"></i>
-                  </a>
-                  <a href="#">
-                    <i class="tf-ion-ios-heart"></i>
-                  </a>
-                </div>
-
-                <div class="product-info">
-                  <h2 class="product-title h5 mb-0">
-                    <a href="#">Frock short</a>
-                  </h2>
-                  <span class="price">$249</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-12 col-md-6 col-sm-6 mb-5">
-              <div class="product">
-                <div class="product-wrap">
-                  <a href="#">
-                    <img
-                      class="img-fluid w-100 mb-3 img-first"
-                      src="assets/images/444.jpg"
-                      alt="product-img"
-                    />
-                  </a>
-                  <a href="#">
-                    <img
-                      class="img-fluid w-100 mb-3 img-second"
-                      src="assets/images/222.jpg"
-                      alt="product-img"
-                    />
-                  </a>
-                </div>
-
-                <div class="product-hover-overlay">
-                  <a href="#">
-                    <i class="tf-ion-android-cart"></i>
-                  </a>
-                  <a href="#">
-                    <i class="tf-ion-ios-heart"></i>
-                  </a>
-                </div>
-
-                <div class="product-info">
-                  <h2 class="product-title h5 mb-0">
-                    <a href="#">Sleeve dress</a>
-                  </h2>
-                  <span class="price">$59.10</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-12 col-md-6 col-sm-6 mb-5">
-              <div class="product">
-                <div class="product-wrap">
-                  <a href="#">
-                    <img
-                      class="img-fluid w-100 mb-3 img-first"
-                      src="assets/images/322.jpg"
-                      alt="product-img"
-                    />
-                  </a>
-                  <a href="#">
-                    <img
-                      class="img-fluid w-100 mb-3 img-second"
-                      src="assets/images/222.jpg"
-                      alt="product-img"
-                    />
-                  </a>
-                </div>
-
-                <div class="product-hover-overlay">
-                  <a href="#">
-                    <i class="tf-ion-android-cart"></i>
-                  </a>
-                  <a href="#">
-                    <i class="tf-ion-ios-heart"></i>
-                  </a>
-                </div>
-
-                <div class="product-info">
-                  <h2 class="product-title h5 mb-0">
-                    <a href="#">Stylish dress</a>
-                  </h2>
-                  <span class="price">$99.00</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-12 col-md-6 col-sm-6 mb-5 ">
-              <div class="product">
-                <div class="product-wrap">
-                  <a href="#">
-                    <img
-                      class="img-fluid w-100 mb-3 img-first"
-                      src="assets/images/111.jpg"
-                      alt="product-img"
-                    />
-                  </a>
-                  <a href="#">
-                    <img
-                      class="img-fluid w-100 mb-3 img-second"
-                      src="assets/images/444.jpg"
-                      alt="product-img"
-                    />
-                  </a>
-                </div>
-
-                <div class="product-hover-overlay">
-                  <a href="#">
-                    <i class="tf-ion-android-cart"></i>
-                  </a>
-                  <a href="#">
-                    <i class="tf-ion-ios-heart"></i>
-                  </a>
-                </div>
-
-                <div class="product-info">
-                  <h2 class="product-title h5 mb-0">
-                    <a href="#">Body suite</a>
-                  </h2>
-                  <span class="price">$329.10</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-12 col-md-6 col-sm-6 mb-5 ">
-              <div class="product">
-                <div class="product-wrap">
-                  <a href="#">
-                    <img
-                      class="img-fluid w-100 mb-3 img-first"
-                      src="assets/images/222.jpg"
-                      alt="product-img"
-                    />
-                  </a>
-                  <a href="#">
-                    <img
-                      class="img-fluid w-100 mb-3 img-second"
-                      src="assets/images/322.jpg"
-                      alt="product-img"
-                    />
-                  </a>
-                </div>
-
-                <div class="product-hover-overlay">
-                  <a href="#">
-                    <i class="tf-ion-android-cart"></i>
-                  </a>
-                  <a href="#">
-                    <i class="tf-ion-ios-heart"></i>
-                  </a>
-                </div>
-
-                <div class="product-info">
-                  <h2 class="product-title h5 mb-0">
-                    <a href="#">Sleeve linen shirt</a>
-                  </h2>
-                  <span class="price">
-                    <del>
-                      60<pre wp-pre-tag-3=""></pre>
-                    </del>
-                    $50.10
-                  </span>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
