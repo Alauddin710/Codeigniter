@@ -42,6 +42,7 @@
                         </div>
 
                         <form method="post" action="<?= base_url('/products/create') ?>" enctype="multipart/form-data">
+                            <?= csrf_field(); ?>
                             <div class="card-body">
 
                                 <div class="form-group">

@@ -63,6 +63,11 @@ $routes->get('/qb', 'Qb::index');
 // forntend
 $routes->get('/frontend/products', 'Frontend::ProductList');
 
+//test
+$routes->get('/test', 'TestController::index');
+$routes->get('test/list', 'TestController::productlist');
+$routes->get('/about', 'TestController::about');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
