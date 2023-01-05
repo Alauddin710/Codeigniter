@@ -49,6 +49,8 @@ $routes->post('users/store', 'SignupController::store');
 $routes->get('users/signin', 'SigninController::index');
 $routes->post('users/auth', 'SigninController::loginauth');
 $routes->get('users/logout', 'SigninController::logout');
+//qb
+$routes->get('qb', 'Qb::index');
 
 //frontend
 $routes->get('frontend/products', 'Frontend::ProductList');

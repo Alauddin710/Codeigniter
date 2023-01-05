@@ -1,0 +1,62 @@
+Admin Lte Download
+1. create project: composer create-project codeigniter4/appstarter backend
+2. Create database: fullstack_project
+3. Database connection with  .env file 
+4. create controller: php spark make:controller dashboard
+5. Default Controller, Route
+6. dist, plugins folder from adminlte copied public/assets folder
+7. copied all codes from index.html to admin_home.php and update path
+8. templating for dashboard.php
+9. migration for Products // php spark make:migration Products
+php spark migrate
+php spark migrate:refresh //table muse jabe abar migrate korle turi hobe
+php spark migrate:rollback //
+10. Model for Product Model // php spark make:Model ProductModel
+11. Control for Products // php spark make:controller Products --restful
+
+27/12/2022
+12. seeder: php spark make:seeder productsseeder
+data send : php spark db:seed ProductsSeeder
+
+1. Auth Login: 
+-php spark make:migration users
+-php spark migrate 
+-php spark make:model usermodel
+-php spark make:controller signupcontroller
+-php spark make:controller signincontroller
+-php spark make:filter authguard //tat command dile pilter ar moodde atuhguard turi hobe
+
+frontend
+-npx i react-router-dom
+-php spark make:filter Cors
+npm i axios
+
+*********
+Query Builder
+####From employees table
+1. firstName, lastName, email those jobTitle are sales Rep
+2. firstName, lastName, email those jobTitle are sales Rep and reportsTo 1143
+3.  
+#### From employees and offices table
+firstName, lastName, email, city, country those are from USA
+4.  
+#### From orders, customers
+customerName, phone, city, orderNumber, orderDate, status
+5.  
+#### From orders, orderdetails and customers
+customerName, phone, city, orderNumber, orderDate, status, quantityOrdered, priceEach
+6.  
+#### From orders, orderdetails, customers, products
+SELECT customerName, city, orders.orderNumber, orderDate, products.productCode, productName, sum(quantityOrdered), sum(priceEach), MSRP
+from orders, orderdetails, customers, products where
+orders.orderNumber = orderdetails.orderNumber AND
+products.productCode = orderdetails.productCode AND
+orders.customerNumber =  customers.customerNumber
+GROUP BY orders.orderNumber
+
+
+7. Country wise order success summary
+8. Customer wise order success summary
+9. Sales reprensentative wise order success report
+10. Order success rate city wise
+11. Monthy order numbers
