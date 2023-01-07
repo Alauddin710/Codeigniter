@@ -114,7 +114,7 @@ class Products extends ResourceController
 
             $model = new ProductModel();
             $model->save($data);
-            return redirect()->to('products');
+            return redirect()->to('products')->with('msg', 'Inserted successfully');
         }
     }
 

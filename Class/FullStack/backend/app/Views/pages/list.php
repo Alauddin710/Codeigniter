@@ -28,27 +28,9 @@
             </tr>
         <?php endforeach ?>
     </table>
-    <div class="pagination justify-content-center ">
-        <!-- <ul class="pagination"> -->
-        <?php if ($pager) : ?>
-            <!-- <li class="page-item"><a class="page-link" href="">Previous</a></li>
-                <li class="page-item"><a class="page-link" href="">3</a></li>
-                <li class="page-item"><a class="page-link" href="">Next</a></li> -->
-            <?php $pagi_path = 'index.php/test/list' ?>
-            <?php $pager->setPath($pagi_path) ?>
-            <?php echo $pager->links(); ?>
-        <?php endif ?>
-        <!-- </ul> -->
-    </div>
-    <?php
-    // echo "<pre>";
-    // print_r($products);
-    // echo "<hr>";
-    // print_r($pager)
 
-    // foreach ($products as $product) {
-    //}
-    ?>
+    <!-- pagination -->
+    <?php echo $pager->links('group1', 'bs_full'); ?>
 </body>
 
 </html>

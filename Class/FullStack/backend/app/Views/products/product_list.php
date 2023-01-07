@@ -79,8 +79,17 @@
                                             <td> <img width="50px" src="<?= $product['product_image']; ?>" alt=""> </td>
 
                                             <td> <?= $product['product_category']; ?></td>
-                                            <td> <a href="<?= site_url("/products/edit/" . $product['id']) ?>"> <i class="fa fa-pen"></i></a>
-                                                <a href="/products/delete/<?php echo $product['id']; ?>"> <i class="fa fa-trash"></i></a>
+
+                                            <td class=" d-flex justyfy-content-bettwen"> <a href="<?= site_url("/products/edit/" . $product['id']) ?>"> <i class="btn btn-info">Edit</i></a>
+
+
+                                                <form action="<?= site_url("/products/delete/" . $product['id']) ?>">
+                                                    <?= csrf_field() ?>
+                                                    <button class="btn btn-danger" type="submit">Delete</button>
+                                                </form>
+
+
+
                                             </td>
                                         </tr>
                                     <?php endforeach ?>

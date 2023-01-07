@@ -48,7 +48,7 @@ $routes->setAutoRoute(true);
 // $routes->get('/admin', 'Dashboard::index', ['filter' => 'authGuard']);
 $routes->get('/', 'Dashboard::index', ['filter' => 'authGuard']);
 // $routes->resource('Products');
-$routes->presenter('products', ['filter' => 'authGuard']);
+$routes->presenter('psroducts', ['filter' => 'authGuard']);
 
 
 $routes->get('/users/signup', 'SignupController::index');

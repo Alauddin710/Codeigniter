@@ -21,7 +21,7 @@ class TestController extends BaseController
     {
         $model = new ProductModel();
         $data = [
-            'products' => $model->paginate(5),
+            'products' => $model->paginate(5, 'group1'),
             'pager' => $model->pager,
         ];
         return view('pages/list', $data);
