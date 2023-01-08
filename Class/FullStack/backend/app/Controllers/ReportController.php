@@ -37,7 +37,7 @@ class ReportController extends BaseController
     public function orderQuery()
     {
         $start = $_GET['start'];
-        $start = $_GET['end'];
+        $end = $_GET['end'];
         $db = db_connect('query_builder');
         // $builder = $db->table('customers,orders');
         // $builder->where("orders.customerNumber = customers.customerNumber");
