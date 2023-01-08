@@ -45,6 +45,7 @@
 
     });
 </script>
+<script src="/assets/myscript.js"></script>
 </body>
 
 </html>

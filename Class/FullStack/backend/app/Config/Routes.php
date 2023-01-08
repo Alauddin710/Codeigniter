@@ -48,6 +48,15 @@ $routes->setAutoRoute(true);
 // $routes->get('/admin', 'Dashboard::index', ['filter' => 'authGuard']);
 $routes->get('/', 'Dashboard::index', ['filter' => 'authGuard']);
 // $routes->resource('Products');
+
+// reports
+$routes->get('reports/stafflist', 'ReportController::stafflist', ['filter' => 'authGuard']);
+$routes->get('reports/allstaff', 'ReportController::allstaff', ['filter' => 'authGuard']);
+
+$routes->get('reports/orderlist', 'ReportController::orderlist', ['filter' => 'authGuard']);
+
+$routes->get('reports/orderquery', 'ReportController::orderQuery', ['filter' => 'authGuard']);
+
 $routes->presenter('psroducts', ['filter' => 'authGuard']);
 
 
